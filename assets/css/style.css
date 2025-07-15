@@ -1,0 +1,206 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0c0000;
+  color: white;
+  user-select: none;
+}
+.logo {
+  display: block;
+  margin: 20px auto;
+  height: 100px;
+  object-fit: cover;
+}
+.money--box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px auto;
+  width: 270px;
+  height: 50px;
+  background: linear-gradient(90deg, #fcff9e 100%, #c67700 0%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 8px 10px;
+  position: relative;
+  box-shadow: 0 0 0 4px transparent,
+    /* Giả lập viền 4px */ inset 0 0 0 4px
+      linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+}
+.money--box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px; /* độ dày của border */
+  border-radius: 20px;
+  background: linear-gradient(90deg, #fcff9e, #c67700);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+.display-game {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.display-game button {
+  color: white;
+  font-size: 150px;
+  background: none;
+  border: transparent;
+  cursor: pointer;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+#tai__button--cta,
+#xiu__button--cta {
+  padding-right: 30px;
+  padding-left: 15px;
+  color: #0c0000;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.43);
+  background-image: linear-gradient(90deg, #c67700 0%, #fcff9e 100%);
+  border-radius: 30px;
+}
+#tai__button--cta:hover,
+#xiu__button--cta:hover {
+  color: #fdebda;
+}
+
+.result--game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 220px;
+  font-size: 200px;
+  padding: 50px;
+  border: 10px solid #daae51;
+  border-radius: 50%;
+  margin: -30px 50px;
+
+  background: linear-gradient(90deg, #d53369 40%, #daae51 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tai__button,
+.xiu__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 50px;
+}
+.display-game .bet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  width: 250px;
+  height: 50px;
+  color: #fcff9e;
+  background-color: #3a2505;
+  border-radius: 15px;
+  margin-left: 33px;
+}
+.display-game .bet__input {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  width: 250px;
+  height: 50px;
+  color: #fcff9e;
+  background-color: #3a2505;
+  border-radius: 15px;
+  margin-left: 35px;
+  border: none;
+}
+.rcm--list {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  gap: 50px;
+  font-size: 30px;
+  font-weight: 600;
+}
+.rcm-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  background-color: #3a2505;
+  border: 4px solid #fcff9e;
+  border-radius: 10px;
+  color: #fcff9e;
+}
+.rcm-item:hover {
+  background-color: #fcff9e;
+  border: 4px solid #3a2505;
+  color: #3a2505;
+}
+.button--list {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 25px;
+}
+.all-in__btn,
+.reset--btn {
+  width: 250px;
+  height: 50px;
+}
+.bet__btn {
+  width: 300px;
+  height: 70px;
+  background: linear-gradient(
+    180deg,
+    #fcff9e 0%,
+    #c67700 35%,
+    #c67700 65%,
+    #fcff9e 100%
+  );
+  font-weight: 700;
+  color: #feffea;
+  font-size: 25px;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 999px;
+}
+.bet__btn:hover,
+.all-in__btn:hover,
+.reset--btn:hover {
+  box-shadow: 0px 0px 39px 12px rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0px 0px 39px 12px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0px 0px 39px 12px rgba(255, 255, 255, 0.5);
+}
+.all-in__btn {
+  background: linear-gradient(90deg, #efd5ff 0%, #515ada 70%);
+  font-weight: 700;
+  color: #feffea;
+  font-size: 25px;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 999px;
+}
+.reset--btn {
+  background: linear-gradient(90deg, #d53369 40%, #daae51 100%);
+  font-weight: 700;
+  color: #feffea;
+  font-size: 25px;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 999px;
+}
+#ketqua {
+  margin-top: 30px;
+  text-align: center;
+  font-weight: 700;
+  color: #fdebda;
+  font-size: 40px;
+  text-shadow: 4px 4px 0px rgba(113, 113, 113, 0.3);
+  border-radius: 999px;
+}

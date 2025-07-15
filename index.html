@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tài Xỉu Đỉnh Cao</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./assets/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./assets/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./assets/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./assets/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./assets/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./assets/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./assets/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./assets/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./assets/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="./assets/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <img
+      class="logo"
+      src="./assets/img/taixiudinhcao-logo.png"
+      alt="Tài Xỉu Đỉnh Cao"
+    />
+    <div class="money--box">
+      <p>Số dư:</p>
+      <p id="userMoney"></p>
+      <p>vnd</p>
+    </div>
+    <p id="ketqua">&nbsp;</p>
+    <div class="display-game">
+      <div class="tai-xiu">
+        <div class="tai__button">
+          <button
+            id="tai__button--cta"
+            onclick="
+            choiceSelectedCSS(0);
+            "
+          >
+            TÀI
+          </button>
+        </div>
+        <p class="bet">ĐẶT CƯỢC</p>
+      </div>
+      <div class="result--game"><p id="computerRandom">0</p></div>
+      <div class="xiu">
+        <div class="xiu__button">
+          <button
+            id="xiu__button--cta"
+            onclick="
+            choiceSelectedCSS(1);
+            "
+          >
+            XỈU
+          </button>
+        </div>
+        <input
+          class="bet__input"
+          id="bet__input"
+          type="number"
+          min="0"
+          max="1000000000"
+          step="1"
+          placeholder="Nhập tiền cược"
+        />
+      </div>
+    </div>
+    <div class="rcm--list">
+      <div class="rcm-item">
+        <p
+          onclick="
+            betRcm(1000);
+            "
+        >
+          1K
+        </p>
+      </div>
+      <div class="rcm-item">
+        <p
+          onclick="
+            betRcm(10000);
+            "
+        >
+          10K
+        </p>
+      </div>
+      <div class="rcm-item">
+        <p
+          onclick="
+            betRcm(50000);
+            "
+        >
+          50K
+        </p>
+      </div>
+      <div class="rcm-item">
+        <p
+          onclick="
+            betRcm(100000);
+            "
+        >
+          100K
+        </p>
+      </div>
+      <div class="rcm-item">
+        <p
+          onclick="
+            betRcm(500000);
+            "
+        >
+          500K
+        </p>
+      </div>
+      <div class="rcm-item">
+        <p
+          onclick="
+            betRcm(5000000);
+            "
+        >
+          5M
+        </p>
+      </div>
+      <div class="rcm-item">
+        <p
+          onclick="
+            betRcm(10000000);
+            "
+        >
+          10M
+        </p>
+      </div>
+      <div class="rcm-item">
+        <p
+          onclick="
+            betRcm(50000000);
+            "
+        >
+          50M
+        </p>
+      </div>
+    </div>
+    <div class="button--list">
+      <button
+        class="all-in__btn"
+        onclick="
+        allin();
+        "
+      >
+        ALL-IN
+      </button>
+      <button class="bet__btn" onclick="result();">ĐẶT CƯỢC</button>
+      <button class="reset--btn" onclick="resetChoice();">ĐẶT LẠI</button>
+    </div>
+    <script>
+      //hướng dẫn
+      window.onload = function () {
+        alert(
+          'HƯỚNG DẪN CHƠI "TÀI XỈU ĐỈNH CAO"\nXỉu: tổng từ 4 đến 10\nTài: tổng từ 11 đến 17\nHòa: tổng là 3 hoặc 18\n___________________________________________\nHết tiền thì load lại trang nhé ^^'
+        );
+      };
+
+      //Số tiền đang đặt
+      let moneyBet = 0;
+      //số dư
+      let userMoney = 100000;
+      document.getElementById("userMoney").innerText = userMoney;
+      //userchoice
+      let userchoice = -1;
+      //random
+      let computerRandom = 0;
+      document.getElementById("computerRandom").innerText = computerRandom;
+      //function
+      function choiceSelectedCSS(taiOrXiu) {
+        userchoice = taiOrXiu;
+        const taiBox = document.getElementById("tai__button--cta");
+        const xiuBox = document.getElementById("xiu__button--cta");
+        if (taiOrXiu === 0) {
+          //tài
+          taiBox.style.color = "#fdebda";
+          xiuBox.style.color = "#0c0000";
+        } else {
+          //Xỉu
+          xiuBox.style.color = "#fdebda";
+          taiBox.style.color = "#0c0000";
+        }
+      }
+      function betRcm(value) {
+        if (moneyBet + value > userMoney) {
+          alert("Số tiền không đủ!");
+        } else {
+          moneyBet += value;
+          document.getElementById("bet__input").value = moneyBet;
+        }
+      }
+      function allin() {
+        moneyBet = userMoney;
+        document.getElementById("bet__input").value = userMoney;
+      }
+      function resetChoice() {
+        moneyBet = 0;
+        userchoice = -1;
+        const taiBox = document.getElementById("tai__button--cta");
+        const xiuBox = document.getElementById("xiu__button--cta");
+        xiuBox.style.color = "#0c0000";
+        taiBox.style.color = "#0c0000";
+        document.getElementById("bet__input").value = "";
+        computerRandom = 0;
+        document.getElementById("computerRandom").innerText = computerRandom;
+        document.getElementById("ketqua").innerHTML = "&nbsp;";
+      }
+      function result() {
+        moneyBet = Number(document.getElementById("bet__input").value); // ÉP KIỂU Ở ĐÂY
+
+        if (moneyBet < 0) {
+          alert("Không được nhập số âm!");
+          return;
+        }
+
+        if (moneyBet < 1) {
+          alert("Vui lòng nhập tiền cược!");
+        } else if (userchoice > 1 || userchoice < 0) {
+          alert('Vui lòng chọn "TÀI" hoặc "XỈU"!');
+        } else if (moneyBet > userMoney) {
+          alert("Số tiền không đủ!");
+          document.getElementById("bet__input").value = "";
+          moneyBet = 0;
+        } else {
+          computerRandom = Math.floor(Math.random() * (18 - 3 + 1)) + 3;
+          document.getElementById("computerRandom").innerText = computerRandom;
+          if (computerRandom > 3 && computerRandom < 11) {
+            //XIU
+            if (userchoice === 1) {
+              //win
+              userMoney += moneyBet;
+              document.getElementById("ketqua").innerText = "THẮNG";
+            } else {
+              userMoney -= moneyBet;
+              document.getElementById("ketqua").innerText = "THUA";
+            }
+          } else if (computerRandom > 10 && computerRandom < 18) {
+            //TAI
+            if (userchoice === 0) {
+              //win
+              userMoney += moneyBet;
+              document.getElementById("ketqua").innerText = "THẮNG";
+            } else {
+              userMoney -= moneyBet;
+              document.getElementById("ketqua").innerText = "THUA";
+            }
+          } else {
+            document.getElementById("ketqua").innerText = "HÒA";
+          }
+          document.getElementById("userMoney").innerText = userMoney;
+        }
+      }
+    </script>
+  </body>
+</html>
