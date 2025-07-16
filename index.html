@@ -90,139 +90,141 @@
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-    <img
-      class="logo"
-      src="./assets/img/taixiudinhcao-logo.png"
-      alt="Tài Xỉu Đỉnh Cao"
-    />
-    <div class="money--box">
-      <p>Số dư:</p>
-      <p id="userMoney"></p>
-      <p>vnd</p>
-    </div>
-    <p id="ketqua">&nbsp;</p>
-    <div class="display-game">
-      <div class="tai-xiu">
-        <div class="tai__button">
-          <button
-            id="tai__button--cta"
-            onclick="
+    <div class="main">
+      <img
+        class="logo"
+        src="./assets/img/taixiudinhcao-logo.png"
+        alt="Tài Xỉu Đỉnh Cao"
+      />
+      <div class="money--box">
+        <p>Số dư:</p>
+        <p id="userMoney"></p>
+        <p>vnd</p>
+      </div>
+      <p id="ketqua">&nbsp;</p>
+      <div class="display-game">
+        <div class="tai-xiu">
+          <div class="tai__button">
+            <button
+              id="tai__button--cta"
+              onclick="
             choiceSelectedCSS(0);
             "
-          >
-            TÀI
-          </button>
+            >
+              TÀI
+            </button>
+          </div>
+          <p class="bet">ĐẶT CƯỢC</p>
         </div>
-        <p class="bet">ĐẶT CƯỢC</p>
-      </div>
-      <div class="result--game"><p id="computerRandom">0</p></div>
-      <div class="xiu">
-        <div class="xiu__button">
-          <button
-            id="xiu__button--cta"
-            onclick="
+        <div class="result--game"><p id="computerRandom">0</p></div>
+        <div class="xiu">
+          <div class="xiu__button">
+            <button
+              id="xiu__button--cta"
+              onclick="
             choiceSelectedCSS(1);
             "
-          >
-            XỈU
-          </button>
+            >
+              XỈU
+            </button>
+          </div>
+          <input
+            class="bet__input"
+            id="bet__input"
+            type="number"
+            min="0"
+            max="1000000000"
+            step="1"
+            placeholder="Nhập tiền cược"
+          />
         </div>
-        <input
-          class="bet__input"
-          id="bet__input"
-          type="number"
-          min="0"
-          max="1000000000"
-          step="1"
-          placeholder="Nhập tiền cược"
-        />
       </div>
-    </div>
-    <div class="rcm--list">
-      <div class="rcm-item">
-        <p
-          onclick="
+      <div class="rcm--list">
+        <div class="rcm-item">
+          <p
+            onclick="
             betRcm(1000);
             "
-        >
-          1K
-        </p>
-      </div>
-      <div class="rcm-item">
-        <p
-          onclick="
+          >
+            1K
+          </p>
+        </div>
+        <div class="rcm-item">
+          <p
+            onclick="
             betRcm(10000);
             "
-        >
-          10K
-        </p>
-      </div>
-      <div class="rcm-item">
-        <p
-          onclick="
+          >
+            10K
+          </p>
+        </div>
+        <div class="rcm-item">
+          <p
+            onclick="
             betRcm(50000);
             "
-        >
-          50K
-        </p>
-      </div>
-      <div class="rcm-item">
-        <p
-          onclick="
+          >
+            50K
+          </p>
+        </div>
+        <div class="rcm-item">
+          <p
+            onclick="
             betRcm(100000);
             "
-        >
-          100K
-        </p>
-      </div>
-      <div class="rcm-item">
-        <p
-          onclick="
+          >
+            100K
+          </p>
+        </div>
+        <div class="rcm-item">
+          <p
+            onclick="
             betRcm(500000);
             "
-        >
-          500K
-        </p>
-      </div>
-      <div class="rcm-item">
-        <p
-          onclick="
+          >
+            500K
+          </p>
+        </div>
+        <div class="rcm-item">
+          <p
+            onclick="
             betRcm(5000000);
             "
-        >
-          5M
-        </p>
-      </div>
-      <div class="rcm-item">
-        <p
-          onclick="
+          >
+            5M
+          </p>
+        </div>
+        <div class="rcm-item">
+          <p
+            onclick="
             betRcm(10000000);
             "
-        >
-          10M
-        </p>
-      </div>
-      <div class="rcm-item">
-        <p
-          onclick="
+          >
+            10M
+          </p>
+        </div>
+        <div class="rcm-item">
+          <p
+            onclick="
             betRcm(50000000);
             "
-        >
-          50M
-        </p>
+          >
+            50M
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="button--list">
-      <button
-        class="all-in__btn"
-        onclick="
+      <div class="button--list">
+        <button
+          class="all-in__btn"
+          onclick="
         allin();
         "
-      >
-        TẤT TAY
-      </button>
-      <button class="bet__btn" onclick="result();">ĐẶT CƯỢC</button>
-      <button class="reset--btn" onclick="resetChoice();">ĐẶT LẠI</button>
+        >
+          TẤT TAY
+        </button>
+        <button class="bet__btn" onclick="result();">ĐẶT CƯỢC</button>
+        <button class="reset--btn" onclick="resetChoice();">ĐẶT LẠI</button>
+      </div>
     </div>
     <script>
       //hướng dẫn

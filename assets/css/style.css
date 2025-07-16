@@ -11,6 +11,9 @@ body {
   background-color: #0c0000;
   color: white;
   user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
@@ -157,6 +160,7 @@ body {
 .button--list {
   display: flex;
   gap: 15px;
+  align-items: center;
   justify-content: center;
   margin-top: 25px;
 }
@@ -214,13 +218,153 @@ body {
   border-radius: 999px;
 }
 /* tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
-  body {
-    background-color: red;
+@media (min-width: 766px) and (max-width: 1024px) {
+  .logo {
+    margin: 15px auto;
+    height: 70px;
+  }
+  .money--box {
+    margin: 10px auto;
+    width: 200px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 8px 10px;
+  }
+  .money--box::before {
+    padding: 3px; /* độ dày của border */
+    border-radius: 15px;
+  }
+  .display-game {
+    margin-top: 0;
+  }
+
+  .display-game button {
+    color: white;
+    font-size: 10rem;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+  #tai__button--cta,
+  #xiu__button--cta {
+    padding-right: 25px;
+    padding-left: 25px;
+    color: #0c0000;
+
+    border-radius: 20px;
+  }
+  #tai__button--cta:hover,
+  #xiu__button--cta:hover {
+    color: #fdebda;
+  }
+
+  .result--game {
+    width: 80px;
+    height: 80px;
+    font-size: 10rem;
+    padding: 50px;
+    border: 8px solid #daae51;
+    margin: 0 50px;
+  }
+
+  .tai__button,
+  .xiu__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 50px;
+  }
+  .display-game .bet {
+    font-size: 1.5rem;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 25px;
+    /* margin-left: 33px; */
+  }
+  .display-game .bet__input {
+    font-size: 1.5rem;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    margin-right: 25px;
+  }
+  .rcm--list {
+    margin-top: 40px;
+    gap: 10px;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .rcm-item {
+    width: 80px;
+    height: 40px;
+    background-color: #3a2505;
+    border: 3px solid #fcff9e;
+    border-radius: 8px;
+    color: #fcff9e;
+  }
+  .button--list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .all-in__btn,
+  .reset--btn {
+    width: 200px;
+    height: 50px;
+  }
+  .bet__btn {
+    width: 250px;
+    height: 70px;
+    background: linear-gradient(
+      180deg,
+      #fcff9e 0%,
+      #c67700 35%,
+      #c67700 65%,
+      #fcff9e 100%
+    );
+    font-weight: 700;
+    color: #feffea;
+    font-size: 2.5rem;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 999px;
+  }
+  .bet__btn:hover,
+  .all-in__btn:hover,
+  .reset--btn:hover {
+    box-shadow: 0px 0px 39px 12px rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0px 0px 39px 12px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: 0px 0px 39px 12px rgba(255, 255, 255, 0.5);
+  }
+  .all-in__btn {
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 70%);
+    font-weight: 700;
+    color: #feffea;
+    font-size: 2.5rem;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 999px;
+  }
+  .reset--btn {
+    background: linear-gradient(90deg, #d53369 40%, #daae51 100%);
+    font-weight: 700;
+    color: #feffea;
+    font-size: 2.5rem;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 999px;
+  }
+  #ketqua {
+    margin: 10px;
+
+    color: #fdebda;
+    font-size: 3rem;
   }
 }
+
 /* Phone */
-@media (max-width: 767px) {
+@media (max-width: 765px) {
   .logo {
     margin: 15px auto;
     height: 50px;
@@ -314,6 +458,7 @@ body {
   .button--list {
     display: flex;
     gap: 10px;
+    align-items: center;
     justify-content: center;
     margin-top: 25px;
   }
